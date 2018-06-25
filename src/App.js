@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css';
 import Main from './Routing/Main.js';
+import Nav from './Components/Navbar/Nav.js';
 
 const App = () => (
-  <div>
+  <div className="App">
+    <Nav />
     <Main />
   </div>
 )

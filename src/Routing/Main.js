@@ -5,13 +5,13 @@ import Gallery from '../Components/Gallery/Gallery.js';
 import Contact from '../Components/Contact/Contact.js';
 
 const Main = () => (
-  <main>
+  <div>
     <Switch>
       <Route exact path='/' component={Home} />
-      <Route path='/gallery' component={Gallery} />
+      <Route path='/portfolio' component={Gallery} />
       <Route path='/contact' component={Contact} />
     </Switch>
-  </main>
+  </div>
 )
 
 export default Main;
