@@ -1,8 +1,11 @@
 import React from 'react';
+import Sidenav from './Sidenav/SideNav.js'
+import Pictureview from './PictureView/PictureView.js'
 
 const FullGallery = () => (
   <div>
-    <h2>This is the full gallery page!</h2>
+    <Sidenav />
+    <Pictureview />
   </div>
 );
 

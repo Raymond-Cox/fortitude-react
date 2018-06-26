@@ -10,6 +10,7 @@ export const Navbar = styled.div`
 export const AwayNavbar = Navbar.extend`
   justify-content: space-between;
   height: 100px;
+  border-bottom: 1px solid grey;
 `;
 export const List = styled.ul`
   display: flex;
@@ -44,7 +45,6 @@ export const List = styled.ul`
   }
 `;
 export const AwayList = List.extend`
-  border: 1px solid orange;
   .NavbarLink {
     color: #333333;
     text-shadow: 1px 1px lightgrey;
@@ -64,6 +64,5 @@ export const Brand = styled.div`
   color: #333333;
   text-shadow: 1px 1px lightgrey;
   font-family: 'satisfy', cursive;
-  border: 1px solid red;
 `;
 

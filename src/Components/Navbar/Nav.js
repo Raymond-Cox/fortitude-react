@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import '../../App.css';
 import {Navbar, List, AwayNavbar, AwayList, Brand } from './style.js';
+import createHistory from "history/createBrowserHistory"
 
 class Nav extends Component {
   constructor(props) {
@@ -22,6 +23,15 @@ class Nav extends Component {
     this.setState({
       home: false
     });
+  }
+  componentWillMount() {
+    const history = createHistory();
+    const location = history.location;
+    if (location.pathname !== '/') {
+      this.setState({
+        home: false
+      });
+    }
   }
   componentDidMount() {
     console.log('Component mounted ' + this.state.home);
