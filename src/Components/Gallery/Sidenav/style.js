@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 export const CategoryContainer = styled.div`
-  height: 95vh;
+  max-height: calc(100vh - 81px);
   width: 20vw;
   background-color: #333333;
   margin: 0;

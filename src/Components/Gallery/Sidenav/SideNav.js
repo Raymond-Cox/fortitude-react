@@ -8,31 +8,30 @@ const Sidenav = () => (
 
       <li>
         <NavLink to="/portfolio/femalefashion" className="sideNavLink">Female Fashion
-          <img src="https://webdesignbyraymond.com/fortitudephotos/1.jpg" alt="" className="thumbnail" />
+          <img src="https://webdesignbyraymond.com/fortitudephotos/portfolio/1.jpg" alt="" className="thumbnail" />
         </NavLink>
       </li>
       <hr />
 
       <li>
         <NavLink to="/portfolio/malefashion" className="sideNavLink">Male Fashion
-          <img src="https://webdesignbyraymond.com/fortitudephotos/1.jpg" alt="" className="thumbnail" />
+          <img src="https://webdesignbyraymond.com/fortitudephotos/portfolio/1.jpg" alt="" className="thumbnail" />
         </NavLink>
       </li>
       <hr />
 
       <li>
         <NavLink to="/portfolio/kids" className="sideNavLink">Kids
-          <img src="https://webdesignbyraymond.com/fortitudephotos/1.jpg" alt="" className="thumbnail" />
+          <img src="https://webdesignbyraymond.com/fortitudephotos/portfolio/1.jpg" alt="" className="thumbnail" />
         </NavLink>
       </li>
       <hr />
 
       <li>
         <NavLink to="/portfolio/other" className="sideNavLink">Other
-          <img src="https://webdesignbyraymond.com/fortitudephotos/1.jpg" alt="" className="thumbnail" />
+          <img src="https://webdesignbyraymond.com/fortitudephotos/portfolio/1.jpg" alt="" className="thumbnail" />
         </NavLink>
       </li>
-      <hr />
 
     </CategoryList>
   </CategoryContainer>

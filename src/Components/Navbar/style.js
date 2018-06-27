@@ -10,7 +10,7 @@ export const Navbar = styled.div`
 export const AwayNavbar = Navbar.extend`
   justify-content: space-between;
   height: 100px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid lightgrey;
 `;
 export const List = styled.ul`
   display: flex;

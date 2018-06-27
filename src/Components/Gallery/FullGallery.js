@@ -1,12 +1,13 @@
 import React from 'react';
-import Sidenav from './Sidenav/SideNav.js'
-import Pictureview from './PictureView/PictureView.js'
+import Sidenav from './Sidenav/SideNav.js';
+import Pictureview from './PictureView/PictureView.js';
+import { GalleryView } from './style.js';
 
 const FullGallery = () => (
-  <div>
+  <GalleryView>
     <Sidenav />
     <Pictureview />
-  </div>
+  </GalleryView>
 );
 
 export default FullGallery;

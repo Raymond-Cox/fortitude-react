@@ -44,16 +44,16 @@ export const PhotoBackground = styled.ul`
       animation: ${PhotoChange} 18s linear infinite 0s;
     }
   .img-1 {
-  background-image: url(https://webdesignbyraymond.com/fortitudephotos/1.jpg);
+  background-image: url(https://webdesignbyraymond.com/fortitudephotos/portfolio/1.jpg);
   }
   .img-2 {
-  background-image: url(https://webdesignbyraymond.com/fortitudephotos/2.jpg);
+  background-image: url(https://webdesignbyraymond.com/fortitudephotos/portfolio/2.jpg);
   background-size: cover;
   background-position: 50% 10%;
   animation-delay: 6s;
   }
   .img-3 {
-  background-image: url(https://webdesignbyraymond.com/fortitudephotos/3.jpg);
+  background-image: url(https://webdesignbyraymond.com/fortitudephotos/portfolio/3.jpg);
   background-position: 50% 10%;
   animation-delay: 12s;
   }
