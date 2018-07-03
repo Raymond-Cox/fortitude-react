@@ -24,7 +24,7 @@ export const ViewContainer = styled.div`
 export const Title = styled.p`
   display: flex;
   justify-content: center;
-  border: 1px solid red;
+  border-bottom: 1px solid lightgrey;
   color: white;
   font-family: 'satisfy', cursive;
   font-size: 2em;
@@ -34,7 +34,8 @@ export const TestImg = styled.div`
   margin: 0 auto;
   height: 600px;
   width: 800px;
-  border: 1px solid blue;
+  border: 1px solid darkgrey;
+  box-shadow: 1px 1px 15px white;
 
   .test-sizing {
     width: auto;

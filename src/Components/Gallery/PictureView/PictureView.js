@@ -47,13 +47,18 @@ setCountAndLocation = () => {
   }
 }
 createImages = () => {
-  let group = []
+  let images = []
 
   for(let i=1; i <= this.state.count; i++) {
     let imgURL = "https://webdesignbyraymond.com/fortitudephotos" + this.state.location + "/" + i + ".jpg";
-    group.push(<div className="individual-picture" key={i}><img src={imgURL}  alt="" /></div>)
+    // group.push(<div className="individual-picture" key={i}><img src={imgURL}  alt="" /></div>)
+    images.push({
+      original: imgURL,
+      thumbnail: imgURL
+    },)
+    console.log(images);
   }
-  return group
+  return images
 }
 componentDidMount() {
   this.setCountAndLocation();
@@ -90,7 +95,7 @@ const ImageGallery = (props) => {
     return (
     <ViewContainer>
       <Title>{props.getTitle}</Title>
-        <MyComponent />
+        <MyComponent createImages={props.createImages} />
     </ViewContainer>
   );
 }
