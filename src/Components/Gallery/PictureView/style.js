@@ -31,15 +31,15 @@ export const Title = styled.p`
 `;
 
 export const TestImg = styled.div`
-  display: flex;
-  justify-content: center;
-  height: 400px;
-  width: 600px;
-  overflow: hidden;
+  margin: 0 auto;
+  height: 600px;
+  width: 800px;
   border: 1px solid blue;
 
   .test-sizing {
-    flex: none;
-    max-width: none;
+    width: auto;
+    height : auto;
+    max-height: 100%;
+    max-width: 100%;
   }
 `;

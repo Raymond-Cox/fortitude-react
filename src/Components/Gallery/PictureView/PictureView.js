@@ -78,19 +78,19 @@ getLocation = () => {
         getTitle={this.getTitle()}
         getLocation={this.getLocation()}
         createImages={this.createImages()} />
-        <MyComponent />
+        
       </div>
     );
   };
 }
-
+// <div className="picture-grids">
+//   {props.createImages}
+// </div>
 const ImageGallery = (props) => {
     return (
     <ViewContainer>
       <Title>{props.getTitle}</Title>
-        <div className="picture-grids">
-          {props.createImages}
-        </div>
+        <MyComponent />
     </ViewContainer>
   );
 }
