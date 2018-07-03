@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ViewContainer, Title } from './style.js';
 import createHistory from "history/createBrowserHistory";
-import MyComponent from './Sample.js';
+import PictureGallery from './PictureGallery.js';
 import Publications from './Publications.js';
 class Pictureview extends Component {
   constructor(props) {
@@ -108,7 +108,7 @@ const ImageGallery = (props) => {
         {props.checkForHomeGallery ? (
           <Publications />
         ) : (
-          <MyComponent createImages={props.createImages} />
+          <PictureGallery createImages={props.createImages} />
         )}
         
     </ViewContainer>

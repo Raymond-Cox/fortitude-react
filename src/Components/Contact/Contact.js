@@ -1,9 +1,56 @@
 import React from 'react';
+import { ContactContainer, ContactForm, ContactInfo } from './style.js';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Contact = () => (
-  <div>
-    <h2>This is the contact page!</h2>
-  </div>
+  <ContactContainer>
+    <ContactForm>
+    <p className="bold">CONTACT US</p>
+    <p className="extraHeight">We're happy to answer any questions you have or provide you with an estimate. Just send us a message in the form below with any questions you may have.</p>
+
+    <form>
+    YOUR NAME (required) <br />
+    <input type="text" name="name" />
+    <br />
+    YOUR EMAIL (required) <br />
+    <input type="email" name="email" />
+    <br />
+    SUBJECT <br />
+    <input type="text" name="subject" />
+    <br />
+    YOUR MESSAGE <br />
+    <textarea name="message">
+    </textarea>
+    <br />
+    <input className="sendButton" type="submit" value="SEND" />
+    </form>
+    </ContactForm>
+
+    <ContactInfo>
+      <p className="header">EMAIL</p>
+      <p>ashleymay@fortitudephotography.com</p>
+      <hr />
+      <p className="header">PHONE</p>
+      <p>937.509.2589</p>
+      <hr />
+      <p className="header">ON THE WEB</p>
+        <div className="socialmedia">
+          <a href="https://www.facebook.com/fortitudephotographyllc/" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={['fab', 'facebook-f']} />
+          </a>
+
+          <a href="https://www.facebook.com/fortitudephotographyllc/" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={['fab', 'instagram']} />
+          </a>
+
+          <a href="https://www.facebook.com/fortitudephotographyllc/" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={['fab', 'linkedin-in']} />
+          </a>
+
+        </div>
+      <hr />
+    </ContactInfo>
+  </ContactContainer>
 );
 
 export default Contact;

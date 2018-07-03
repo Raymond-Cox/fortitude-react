@@ -1,8 +1,4 @@
 import styled from 'styled-components';
-export const Div = styled.div`
-  margin: 0;
-  padding: 0;
-`;
 
 export const GalleryView = styled.div`
   display: flex;
