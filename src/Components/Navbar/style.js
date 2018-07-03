@@ -64,5 +64,8 @@ export const Brand = styled.div`
   color: #333333;
   text-shadow: 1px 1px lightgrey;
   font-family: 'satisfy', cursive;
+    :hover {
+      cursor: default;
+    }
 `;
 

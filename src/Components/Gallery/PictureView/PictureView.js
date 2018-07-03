@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { ViewContainer, Title } from './style.js';
 import createHistory from "history/createBrowserHistory";
 import MyComponent from './Sample.js';
-
+import Publications from './Publications.js';
 class Pictureview extends Component {
   constructor(props) {
     super(props);
@@ -17,8 +17,10 @@ getTitle = () => {
     return "Kids"
   } else if(this.state.location === "/portfolio/other") {
     return "Other"
-  }
+  } else if (this.state.location === "/portfolio/femalefashion") {
     return "Female Fashion"
+  }
+    return "Publications"
 };
 setCountAndLocation = () => {
   const history = createHistory();
@@ -39,6 +41,11 @@ setCountAndLocation = () => {
       location: location.pathname,
       count: 4
     })
+  } else if (location.pathname === "/portfolio/femalefashion") {
+    this.setState({
+      location: location.pathname,
+      count: 2
+    })
   } else {
     this.setState({
       location: location.pathname,
@@ -51,7 +58,6 @@ createImages = () => {
 
   for(let i=1; i <= this.state.count; i++) {
     let imgURL = "https://webdesignbyraymond.com/fortitudephotos" + this.state.location + "/" + i + ".jpg";
-    // group.push(<div className="individual-picture" key={i}><img src={imgURL}  alt="" /></div>)
     images.push({
       original: imgURL,
       thumbnail: imgURL
@@ -76,26 +82,35 @@ componentDidUpdate() {
 getLocation = () => {
   return this.state.location
 }
+checkForHomeGallery = () => {
+  if(this.state.location === '/portfolio') {
+    return true;
+  }
+}
   render() {
     return (
       <div>
         <ImageGallery 
         getTitle={this.getTitle()}
         getLocation={this.getLocation()}
+        checkForHomeGallery={this.checkForHomeGallery()}
         createImages={this.createImages()} />
         
       </div>
     );
   };
 }
-// <div className="picture-grids">
-//   {props.createImages}
-// </div>
+
 const ImageGallery = (props) => {
     return (
     <ViewContainer>
       <Title>{props.getTitle}</Title>
-        <MyComponent createImages={props.createImages} />
+        {props.checkForHomeGallery ? (
+          <Publications />
+        ) : (
+          <MyComponent createImages={props.createImages} />
+        )}
+        
     </ViewContainer>
   );
 }
