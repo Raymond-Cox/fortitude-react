@@ -5,8 +5,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Contact = () => (
   <ContactContainer>
     <ContactForm>
+    
+    <div className="headerinfo">
     <p className="bold">CONTACT US</p>
     <p className="extraHeight">We're happy to answer any questions you have or provide you with an estimate. Just send us a message in the form below with any questions you may have.</p>
+    </div>
 
     <form>
     YOUR NAME (required) <br />
@@ -22,7 +25,7 @@ const Contact = () => (
     <textarea name="message">
     </textarea>
     <br />
-    <input className="sendButton" type="submit" value="SEND" />
+    <button className="sendButton" type="submit">SEND</button>
     </form>
     </ContactForm>
 
@@ -43,7 +46,7 @@ const Contact = () => (
             <FontAwesomeIcon icon={['fab', 'instagram']} />
           </a>
 
-          <a href="https://www.facebook.com/fortitudephotographyllc/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/ashley-may-a145a4164/" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={['fab', 'linkedin-in']} />
           </a>
 
