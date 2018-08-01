@@ -17,7 +17,7 @@ export const Title = styled.p`
   font-size: 2em;
 `;
 
-export const TestImg = styled.div`
+export const MainImg = styled.div`
   margin: 0 auto;
   height: 600px;
   width: 800px;

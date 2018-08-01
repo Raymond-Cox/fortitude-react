@@ -34,7 +34,7 @@ const Contact = () => (
       <p>ashleymay@fortitudephotography.com</p>
       <hr />
       <p className="header">PHONE</p>
-      <p>937.509.2589</p>
+      <p>937-509-2589</p>
       <hr />
       <p className="header">ON THE WEB</p>
         <div className="socialmedia">

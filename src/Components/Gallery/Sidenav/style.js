@@ -22,7 +22,7 @@ export const CategoryList = styled.ul`
   }
 
   .thumbnail {
-    width: 80%;
+    max-width: 80%;
     margin: 0 auto;
   }
 `;

@@ -10,6 +10,8 @@ class Pictureview extends Component {
 
     };
   }
+
+// This uses states stored location property to determine what string to use for category title
 getTitle = () => {
   if(this.state.location === "/portfolio/malefashion") {
     return "Male Fashion"
@@ -22,6 +24,8 @@ getTitle = () => {
   }
     return "Publications"
 };
+
+// Get path from history, then set state properties with pathname and image count per category.
 setCountAndLocation = () => {
   const history = createHistory();
   const location = history.location;
@@ -29,22 +33,22 @@ setCountAndLocation = () => {
   if (location.pathname === "/portfolio/malefashion") {
     this.setState({
       location: location.pathname,
-      count: 5
+      count: 10
     });
   } else if (location.pathname === "/portfolio/kids") {
     this.setState({
       location: location.pathname,
-      count: 3
+      count: 23
     })
   } else if (location.pathname === "/portfolio/other") {
     this.setState({
       location: location.pathname,
-      count: 4
+      count: 29
     })
   } else if (location.pathname === "/portfolio/femalefashion") {
     this.setState({
       location: location.pathname,
-      count: 2
+      count: 72
     })
   } else {
     this.setState({
@@ -52,7 +56,10 @@ setCountAndLocation = () => {
       count: 2
     })
   }
+    
 }
+
+// Populate array with images when a category is selected by using location prop stored in state in the image path
 createImages = () => {
   let images = []
 
@@ -62,13 +69,16 @@ createImages = () => {
       original: imgURL,
       thumbnail: imgURL
     },)
-    console.log(images);
   }
   return images
 }
+
+// Find out current path and set state properties accordingly on portfolio load
 componentDidMount() {
   this.setCountAndLocation();
 }
+
+// Anytime a category is selected update state properties to reflect choice
 componentWillReceiveProps() {
   const history = createHistory();
   const location = history.location;
@@ -79,9 +89,8 @@ componentWillReceiveProps() {
 componentDidUpdate() {
   console.log("Component updated the path is now " + this.state.location + " and the count is " + this.state.count)
 }
-getLocation = () => {
-  return this.state.location
-}
+
+// This is used to for the logic behind conditionally rendering publications, currently only accessible when first clicking portfolio
 checkForHomeGallery = () => {
   if(this.state.location === '/portfolio') {
     return true;
@@ -92,10 +101,8 @@ checkForHomeGallery = () => {
       <div>
         <ImageGallery 
         getTitle={this.getTitle()}
-        getLocation={this.getLocation()}
         checkForHomeGallery={this.checkForHomeGallery()}
         createImages={this.createImages()} />
-        
       </div>
     );
   };
