@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import {CategoryContainer, CategoryList, Expand} from './style.js';
+import {CategoryContainer, CategoryList, ExpandForeground, Arrow, ExpandBackground} from './style.js';
 
 const Sidenav = () => (
   <CategoryContainer>
@@ -34,9 +34,13 @@ const Sidenav = () => (
       </li>
 
     </CategoryList>
-    <Expand>
-    >
-    </Expand>
+    <ExpandBackground>
+      <ExpandForeground>
+        <Arrow>
+          >
+        </Arrow>
+      </ExpandForeground>
+    </ExpandBackground>
   </CategoryContainer>
 );
 

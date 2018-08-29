@@ -37,11 +37,18 @@ export const CategoryList = styled.ul`
   }
   }
 `;
-export const Expand = styled.div`
+export const ExpandBackground = styled.div`
+  background-color: #333333;
+`;
+export const ExpandForeground = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: grey;
+  height: 100%;
   border-radius: 0px 50% 50% 0px;
   color: white;
+`;
+export const Arrow = styled.div`
+  cursor: pointer;
 `;
