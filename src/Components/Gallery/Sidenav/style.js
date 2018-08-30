@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 export const CategoryContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 20px;
+  grid-template-columns: 1fr 25px;
   max-height: calc(100vh - 81px);
   min-width: 200px;
   width: 20vw;
@@ -32,13 +32,18 @@ export const CategoryList = styled.ul`
     min-height: 175px;
     max-height: 250px;
     margin: 0 auto;
+    
     @media (max-width: 768px) {
     display: none;
-  }
+    }
   }
 `;
 export const ExpandBackground = styled.div`
-  background-color: #333333;
+  background-color: #1a1a1a;
+  display: none;
+    @media (max-width: 768px) {
+      display: block;
+    }
 `;
 export const ExpandForeground = styled.div`
   display: flex;
