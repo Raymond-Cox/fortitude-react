@@ -78,13 +78,19 @@ class Sidenav extends Component {
   }
 
 sliderToggle = () => {
-  this.setState.sideNavOpenState = !this.state.sideNavOpenState;
+  
   if (this.state.sideNavOpenState === false) {
+    console.log('testing false');
     
-    
-    // document.getElementById('sliderTarget').style.transform.translateX(200);
+    document.getElementById('sliderTarget').style.transform = "translateX(200px)";
+  } else {
+    document.getElementById('sliderTarget').style.transform = "translateX(-200px)"
+    console.log('testing true');
   }
   console.log('slider test');
+  this.setState({
+    sideNavOpenState: !this.state.sideNavOpenState
+  })
 }
 
 componentWillReceiveProps() {

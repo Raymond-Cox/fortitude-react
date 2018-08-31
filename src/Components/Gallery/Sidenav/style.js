@@ -9,7 +9,8 @@ export const CategoryContainer = styled.div`
   margin: 0;
   overflow: auto;
     @media (max-width: 768px) {
-
+      transform: translateX(-175px);
+      z-index: 2;
     }
 `;
 export const CategoryList = styled.ul`
